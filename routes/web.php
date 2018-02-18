@@ -22,3 +22,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/users', 'UsersController@index')->name('users');
 Route::post('users/create', 'UsersController@store');
+Route::patch('users/{id}/update', 'UsersController@update');

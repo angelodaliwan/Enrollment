@@ -76,7 +76,13 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        $user->name = $request['name'];
+        $user->email = $request['email'];
+        $user->save();
+
+        return $user;
     }
 
     /**

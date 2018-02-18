@@ -13914,6 +13914,8 @@ window.Vue = __webpack_require__(37);
  */
 
 Vue.component('example-component', __webpack_require__(40));
+
+/** pages */
 Vue.component('user-component', __webpack_require__(55));
 
 var app = new Vue({
@@ -47543,7 +47545,7 @@ exports = module.exports = __webpack_require__(46)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -47556,6 +47558,10 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_CreateUserComponent_vue__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_CreateUserComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_CreateUserComponent_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_EditUserComponent_vue__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_EditUserComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_EditUserComponent_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_EditUserComponent__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_EditUserComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_EditUserComponent__);
 //
 //
 //
@@ -47586,33 +47592,58 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    components: { CreateUser: __WEBPACK_IMPORTED_MODULE_0__components_CreateUserComponent_vue___default.a },
-    props: ['data'],
+  components: {
+    EditUserComponent: __WEBPACK_IMPORTED_MODULE_2__components_EditUserComponent___default.a,
+    CreateUser: __WEBPACK_IMPORTED_MODULE_0__components_CreateUserComponent_vue___default.a },
+  props: ['data'],
 
-    data: function data() {
-        return {
-            users: this.data,
-            create: false
-        };
+  data: function data() {
+    return {
+      users: this.data,
+      create: false,
+      show_edit: false,
+      this_details: null,
+      edit_details: null
+    };
+  },
+
+
+  methods: {
+    Create: function Create() {
+      this.create = true;
     },
-
-
-    methods: {
-        Create: function Create() {
-            this.create = true;
-        },
-        Cancel: function Cancel() {
-            this.create = false;
-        },
-        added: function added(user) {
-            this.data.push(user);
-            this.create = false;
-        }
+    Cancel: function Cancel() {
+      this.create = false;
+    },
+    CancelEdit: function CancelEdit() {
+      this.show_edit = false;
+    },
+    added: function added(user) {
+      this.data.push(user);
+      this.create = false;
+    },
+    showEdit: function showEdit(user) {
+      console.log(user);
+      this.edit_details = user;
+      this.show_edit = true;
+    },
+    update: function update(user_details) {
+      this.data.push(user_details);
+      this.show_edit = false;
     }
+  }
 });
 
 /***/ }),
@@ -47625,48 +47656,89 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "col-md-6" }, [
-      !_vm.create
+      !_vm.show_edit
         ? _c("div", [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-primary btn-sm",
-                on: { click: _vm.Create }
-              },
-              [_vm._v("Create New User")]
-            ),
-            _vm._v(" "),
-            _c("table", { staticClass: "table" }, [
-              _vm._m(0),
-              _vm._v(" "),
-              _c(
-                "tbody",
-                _vm._l(_vm.users, function(user) {
-                  return _c("tr", [
-                    _c("td", [_vm._v(_vm._s(user.name))]),
+            !_vm.create
+              ? _c("div", [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary btn-sm",
+                      on: { click: _vm.Create }
+                    },
+                    [_vm._v("Create New User")]
+                  ),
+                  _vm._v(" "),
+                  _c("table", { staticClass: "table" }, [
+                    _vm._m(0),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(user.email))])
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.users, function(user) {
+                        return _c("tr", [
+                          _c("td", [_vm._v(_vm._s(user.name))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(user.email))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-warning btn-sm",
+                                on: {
+                                  click: function($event) {
+                                    _vm.showEdit(user)
+                                  }
+                                }
+                              },
+                              [_vm._v("Edit")]
+                            )
+                          ])
+                        ])
+                      })
+                    )
                   ])
-                })
-              )
-            ])
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.create
+              ? _c(
+                  "div",
+                  [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-info btn-sm",
+                        on: { click: _vm.Cancel }
+                      },
+                      [_vm._v("Cancel")]
+                    ),
+                    _vm._v(" "),
+                    _c("create-user", { on: { add: _vm.added } })
+                  ],
+                  1
+                )
+              : _vm._e()
           ])
         : _vm._e(),
       _vm._v(" "),
-      _vm.create
+      _vm.show_edit
         ? _c(
             "div",
             [
               _c(
                 "button",
                 {
-                  staticClass: "btn btn-info btn-sm",
-                  on: { click: _vm.Cancel }
+                  staticClass: "btn btn-warning btn-sm",
+                  on: { click: _vm.CancelEdit }
                 },
                 [_vm._v("Cancel")]
               ),
               _vm._v(" "),
-              _c("create-user", { on: { add: _vm.added } })
+              _c("edit-user-component", {
+                attrs: { data: this.edit_details },
+                on: { updated: _vm.update }
+              })
             ],
             1
           )
@@ -47917,6 +47989,243 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-99911522", module.exports)
+  }
+}
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(66)
+}
+var normalizeComponent = __webpack_require__(11)
+/* script */
+var __vue_script__ = __webpack_require__(68)
+/* template */
+var __vue_template__ = __webpack_require__(69)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-3039b261"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/EditUserComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3039b261", Component.options)
+  } else {
+    hotAPI.reload("data-v-3039b261", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(67);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(47)("30bdb448", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3039b261\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditUserComponent.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3039b261\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditUserComponent.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(46)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 68 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['data'],
+
+  data: function data() {
+    return {
+      user: this.data
+    };
+  },
+
+
+  methods: {
+    Update: function Update() {
+      var _this = this;
+
+      var url = '/users/' + this.user.id + '/update';
+
+      var details = {
+        name: this.user.name,
+        email: this.user.email
+      };
+
+      axios.patch(url, details).then(function (_ref) {
+        var data = _ref.data;
+
+        console.log(data);
+        _this.$emit('updated', data);
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "panel panel-default" }, [
+      _c("div", { staticClass: "panel-heading" }, [_vm._v("Edit")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "panel-body" }, [
+        _c("div", { staticClass: "form-group" }, [
+          _c("div", { staticClass: "form-control" }, [
+            _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.user.name,
+                  expression: "user.name"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { id: "name" },
+              domProps: { value: _vm.user.name },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.user, "name", $event.target.value)
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-control" }, [
+            _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.user.email,
+                  expression: "user.email"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { id: "email" },
+              domProps: { value: _vm.user.email },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.user, "email", $event.target.value)
+                }
+              }
+            })
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn btn-success btn-sm", on: { click: _vm.Update } },
+        [_vm._v("Update")]
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-3039b261", module.exports)
   }
 }
 
