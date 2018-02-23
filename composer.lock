@@ -4,8 +4,49 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "05922ac40a9046e18175ed60f2a8d25e",
+    "content-hash": "159079d3add5878b4707b6ea6e8ccdc1",
     "packages": [
+        {
+            "name": "bzarzuela/modelfilter",
+            "version": "v0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bzarzuela/modelfilter.git",
+                "reference": "2ca04409934245b8bf5a0a9684da2f45b234dfa7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bzarzuela/modelfilter/zipball/2ca04409934245b8bf5a0a9684da2f45b234dfa7",
+                "reference": "2ca04409934245b8bf5a0a9684da2f45b234dfa7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bzarzuela\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bryan Zarzuela",
+                    "email": "bryan@teleserv.ph",
+                    "homepage": "http://teleserv.ph"
+                }
+            ],
+            "description": "Utility Class for Laravel 5 to assist in easily filtering paginated results.",
+            "keywords": [
+                "filter",
+                "laravel"
+            ],
+            "time": "2017-07-16T07:00:47+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
