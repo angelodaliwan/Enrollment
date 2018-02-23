@@ -48025,7 +48025,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -48038,10 +48038,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_CreateUserComponent_vue__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_CreateUserComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_CreateUserComponent_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_EditUserComponent_vue__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_EditUserComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_EditUserComponent_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_EditUserComponent__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_EditUserComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_EditUserComponent__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_EditUserComponent__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_EditUserComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_EditUserComponent__);
 //
 //
 //
@@ -48081,16 +48079,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        EditUserComponent: __WEBPACK_IMPORTED_MODULE_2__components_EditUserComponent___default.a,
-        CreateUser: __WEBPACK_IMPORTED_MODULE_0__components_CreateUserComponent_vue___default.a
+        EditUserComponent: __WEBPACK_IMPORTED_MODULE_1__components_EditUserComponent___default.a,
+        CreateUserComponent: __WEBPACK_IMPORTED_MODULE_0__components_CreateUserComponent_vue___default.a
     },
 
     props: ['data'],
@@ -48141,85 +48137,78 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container-fluid" }, [
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-6" }, [
-        _c("div", { staticClass: "panel panel-default" }, [
-          _c("div", { staticClass: "panel-body" }, [
-            !_vm.show_edit
-              ? _c("div", [
-                  !_vm.show_create
-                    ? _c("div", [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-primary btn-sm",
-                            on: { click: _vm.showCreate }
-                          },
-                          [_vm._v("Create New User")]
-                        ),
+    _c("div", { staticClass: "col-md-6" }, [
+      _c("div", { staticClass: "panel panel-primary" }, [
+        _c("div", { staticClass: "panel-heading" }, [_vm._v("Users List")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "panel-body" }, [
+          !_vm.show_create || !_vm.show_edit
+            ? _c("div", [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary btn-sm",
+                    on: { click: _vm.showCreate }
+                  },
+                  [_vm._v("Create New User")]
+                ),
+                _vm._v(" "),
+                _c("table", { staticClass: "table" }, [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _c(
+                    "tbody",
+                    _vm._l(_vm.users, function(user) {
+                      return _c("tr", [
+                        _c("td", [_vm._v(_vm._s(user.name))]),
                         _vm._v(" "),
-                        _c("table", { staticClass: "table" }, [
-                          _vm._m(0),
-                          _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(user.email))]),
+                        _vm._v(" "),
+                        _c("td", [
                           _c(
-                            "tbody",
-                            _vm._l(_vm.users, function(user) {
-                              return _c("tr", [
-                                _c("td", [_vm._v(_vm._s(user.name))]),
-                                _vm._v(" "),
-                                _c("td", [_vm._v(_vm._s(user.email))]),
-                                _vm._v(" "),
-                                _c("td", [
-                                  _c(
-                                    "button",
-                                    {
-                                      staticClass: "btn btn-warning btn-sm",
-                                      on: {
-                                        click: function($event) {
-                                          _vm.showEdit(user)
-                                        }
-                                      }
-                                    },
-                                    [_vm._v("Edit")]
-                                  )
-                                ])
-                              ])
-                            })
+                            "button",
+                            {
+                              staticClass: "btn btn-warning btn-sm",
+                              on: {
+                                click: function($event) {
+                                  _vm.showEdit(user)
+                                }
+                              }
+                            },
+                            [_vm._v("Edit")]
                           )
                         ])
                       ])
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.show_create
-                    ? _c(
-                        "div",
-                        [
-                          _c("create-user", {
-                            on: {
-                              add: _vm.added,
-                              createcanceled: _vm.cancel_Create
-                            }
-                          })
-                        ],
-                        1
-                      )
-                    : _vm._e()
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.show_edit
-              ? _c(
-                  "div",
-                  [
-                    _c("edit-user-component", {
-                      attrs: { data: this.edit_details },
-                      on: { updated: _vm.update, editcanceled: _vm.cancel_Edit }
                     })
-                  ],
-                  1
-                )
-              : _vm._e()
-          ])
+                  )
+                ])
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.show_create
+            ? _c(
+                "div",
+                [
+                  _c("create-user-component", {
+                    on: { add: _vm.added, createcanceled: _vm.cancel_Create }
+                  })
+                ],
+                1
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.show_edit
+            ? _c(
+                "div",
+                [
+                  _c("edit-user-component", {
+                    attrs: { data: this.edit_details },
+                    on: { updated: _vm.update, editcanceled: _vm.cancel_Edit }
+                  })
+                ],
+                1
+              )
+            : _vm._e()
         ])
       ])
     ])
@@ -48234,7 +48223,9 @@ var staticRenderFns = [
       _c("tr", [
         _c("th", [_vm._v("Name")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Email")])
+        _c("th", [_vm._v("Email")]),
+        _vm._v(" "),
+        _c("th")
       ])
     ])
   }
