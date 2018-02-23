@@ -1,11 +1,14 @@
 
 <template>
-    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <search-users-component/>
+        </div>
         <div class="col-md-6">
             <div class="panel panel-primary">
                 <div class="panel-heading">Users List</div>
                 <div class="panel-body">
-                    <div v-if="!show_create || !show_edit">
+                    <div v-if="!show_create && !show_edit">
                         <button class="btn btn-primary btn-sm" @click="showCreate">Create New User</button>
                         <table class="table">
                             <thead>
@@ -24,27 +27,28 @@
                             </tbody>
                         </table>
                     </div>
-                    <div v-if="show_create">
-                        <create-user-component @add="added" @createcanceled="cancel_Create"/>
-                    </div>
-                    <div v-if="show_edit">
-                        <edit-user-component :data="(this.edit_details)" @updated="update" @editcanceled="cancel_Edit"/>
-                    </div>
                 </div>
+            </div>
+            <div v-if="show_create">
+                <create-user-component @add="added" @createcanceled="cancel_Create"/>
+            </div>
+            <div v-if="show_edit">
+                <edit-user-component :data="(this.edit_details)" @updated="update" @editcanceled="cancel_Edit"/>
             </div>
         </div>
     </div>
-
 </template>
 
 <script>
+    import SearchUsersComponent from '../components/SearchUsersComponent';
     import CreateUserComponent from '../components/CreateUserComponent.vue';
-  import EditUserComponent from '../components/EditUserComponent'
+    import EditUserComponent from '../components/EditUserComponent'
 
     export default {
         components: {
             EditUserComponent,
-            CreateUserComponent
+            CreateUserComponent,
+            SearchUsersComponent
         },
 
         props: ['data'],
@@ -57,7 +61,10 @@
               this_details: null,
               edit_details: null,
 
-
+              params: {
+                name : null,
+                email : null,
+              }
             }
         },
 

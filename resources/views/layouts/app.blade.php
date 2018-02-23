@@ -12,17 +12,17 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{--<link href="{{ asset('select2-4.0.3/dist/css/select2.css') }}" rel="stylesheet">--}}
 </head>
 <body>
     <div id="app">
-            @include('layouts.nav')
-
-        <main class="py-4">
-            @yield('content')
-        </main>
+        @include('layouts.nav')
+        @yield('content')
     </div>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
+
+@yield('page_js')
 </body>
 </html>

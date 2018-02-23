@@ -47586,7 +47586,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -47597,6 +47597,9 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
 //
 //
 //
@@ -47658,68 +47661,74 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "form-group" }, [
-      _c("div", { staticClass: "form-control" }, [
-        _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.name,
-              expression: "name"
-            }
-          ],
-          attrs: { id: "name" },
-          domProps: { value: _vm.name },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.name = $event.target.value
-            }
-          }
-        })
+    _c("div", { staticClass: "panel panel-default" }, [
+      _c("div", { staticClass: "panel-heading" }, [
+        _vm._v("Create New Student")
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "form-control" }, [
-        _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.email,
-              expression: "email"
-            }
-          ],
-          attrs: { id: "email" },
-          domProps: { value: _vm.email },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+      _c("div", { staticClass: "panel-body" }, [
+        _c("div", { staticClass: "form-control" }, [
+          _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.name,
+                expression: "name"
               }
-              _vm.email = $event.target.value
+            ],
+            attrs: { id: "name" },
+            domProps: { value: _vm.name },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.name = $event.target.value
+              }
             }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c(
-        "button",
-        { staticClass: "btn btn-success btn-sm", on: { click: _vm.Create } },
-        [_vm._v("Create")]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        { staticClass: "btn btn-warning btn-sm", on: { click: _vm.Cancel } },
-        [_vm._v("Cancel")]
-      )
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-control" }, [
+          _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.email,
+                expression: "email"
+              }
+            ],
+            attrs: { id: "email" },
+            domProps: { value: _vm.email },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.email = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c(
+          "button",
+          { staticClass: "btn btn-success btn-sm", on: { click: _vm.Create } },
+          [_vm._v("Create")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          { staticClass: "btn btn-warning btn-sm", on: { click: _vm.Cancel } },
+          [_vm._v("Cancel")]
+        )
+      ])
     ])
   ])
 }
@@ -47768,7 +47777,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -47779,8 +47788,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
 //
 //
 //
@@ -47845,78 +47852,76 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "panel panel-default" }, [
-      _c("div", { staticClass: "panel-heading" }, [_vm._v("Edit")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "panel-body" }, [
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "form-control" }, [
-            _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.user.name,
-                  expression: "user.name"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: { id: "name" },
-              domProps: { value: _vm.user.name },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.user, "name", $event.target.value)
-                }
-              }
-            })
-          ]),
+  return _c("div", { staticClass: "panel panel-default" }, [
+    _c("div", { staticClass: "panel-heading" }, [_vm._v("Edit")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "panel-body" }, [
+      _c("div", { staticClass: "form-group" }, [
+        _c("div", [
+          _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
           _vm._v(" "),
-          _c("div", { staticClass: "form-control" }, [
-            _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.user.email,
-                  expression: "user.email"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: { id: "email" },
-              domProps: { value: _vm.user.email },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.user, "email", $event.target.value)
-                }
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.user.name,
+                expression: "user.name"
               }
-            })
-          ])
+            ],
+            staticClass: "form-control",
+            attrs: { id: "name" },
+            domProps: { value: _vm.user.name },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.user, "name", $event.target.value)
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.user.email,
+                expression: "user.email"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { id: "email" },
+            domProps: { value: _vm.user.email },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.user, "email", $event.target.value)
+              }
+            }
+          })
         ])
-      ]),
-      _vm._v(" "),
-      _c(
-        "button",
-        { staticClass: "btn btn-success btn-sm", on: { click: _vm.Update } },
-        [_vm._v("Update")]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        { staticClass: "btn btn-warning btn-sm", on: { click: _vm.Cancel } },
-        [_vm._v("Cancel")]
-      )
-    ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "button",
+      { staticClass: "btn btn-success btn-sm", on: { click: _vm.Update } },
+      [_vm._v("Update")]
+    ),
+    _vm._v(" "),
+    _c(
+      "button",
+      { staticClass: "btn btn-warning btn-sm", on: { click: _vm.Cancel } },
+      [_vm._v("Cancel")]
+    )
   ])
 }
 var staticRenderFns = []
@@ -48025,7 +48030,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -48036,10 +48041,12 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_CreateUserComponent_vue__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_CreateUserComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_CreateUserComponent_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_EditUserComponent__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_EditUserComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_EditUserComponent__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_SearchUsersComponent__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_SearchUsersComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_SearchUsersComponent__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_CreateUserComponent_vue__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_CreateUserComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_CreateUserComponent_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_EditUserComponent__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_EditUserComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_EditUserComponent__);
 //
 //
 //
@@ -48079,14 +48086,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        EditUserComponent: __WEBPACK_IMPORTED_MODULE_1__components_EditUserComponent___default.a,
-        CreateUserComponent: __WEBPACK_IMPORTED_MODULE_0__components_CreateUserComponent_vue___default.a
+        EditUserComponent: __WEBPACK_IMPORTED_MODULE_2__components_EditUserComponent___default.a,
+        CreateUserComponent: __WEBPACK_IMPORTED_MODULE_1__components_CreateUserComponent_vue___default.a,
+        SearchUsersComponent: __WEBPACK_IMPORTED_MODULE_0__components_SearchUsersComponent___default.a
     },
 
     props: ['data'],
@@ -48097,8 +48108,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             show_create: false,
             show_edit: false,
             this_details: null,
-            edit_details: null
+            edit_details: null,
 
+            params: {
+                name: null,
+                email: null
+            }
         };
     },
 
@@ -48136,13 +48151,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container-fluid" }, [
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "col-md-6" }, [_c("search-users-component")], 1),
+    _vm._v(" "),
     _c("div", { staticClass: "col-md-6" }, [
       _c("div", { staticClass: "panel panel-primary" }, [
         _c("div", { staticClass: "panel-heading" }, [_vm._v("Users List")]),
         _vm._v(" "),
         _c("div", { staticClass: "panel-body" }, [
-          !_vm.show_create || !_vm.show_edit
+          !_vm.show_create && !_vm.show_edit
             ? _c("div", [
                 _c(
                   "button",
@@ -48183,34 +48200,34 @@ var render = function() {
                   )
                 ])
               ])
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.show_create
-            ? _c(
-                "div",
-                [
-                  _c("create-user-component", {
-                    on: { add: _vm.added, createcanceled: _vm.cancel_Create }
-                  })
-                ],
-                1
-              )
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.show_edit
-            ? _c(
-                "div",
-                [
-                  _c("edit-user-component", {
-                    attrs: { data: this.edit_details },
-                    on: { updated: _vm.update, editcanceled: _vm.cancel_Edit }
-                  })
-                ],
-                1
-              )
             : _vm._e()
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _vm.show_create
+        ? _c(
+            "div",
+            [
+              _c("create-user-component", {
+                on: { add: _vm.added, createcanceled: _vm.cancel_Create }
+              })
+            ],
+            1
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.show_edit
+        ? _c(
+            "div",
+            [
+              _c("edit-user-component", {
+                attrs: { data: this.edit_details },
+                on: { updated: _vm.update, editcanceled: _vm.cancel_Edit }
+              })
+            ],
+            1
+          )
+        : _vm._e()
     ])
   ])
 }
@@ -48236,6 +48253,200 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-514dfbca", module.exports)
+  }
+}
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(73)
+/* template */
+var __vue_template__ = __webpack_require__(75)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/SearchUsersComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6b3f8fd4", Component.options)
+  } else {
+    hotAPI.reload("data-v-6b3f8fd4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 71 */,
+/* 72 */,
+/* 73 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'search-users-component',
+
+  data: function data() {
+    return {
+      params: {
+        name: null,
+        email: null
+      }
+    };
+  },
+
+
+  methods: {
+    Filter: function Filter() {
+      var _this = this;
+
+      var url = '/users/filters';
+
+      var details = {
+        name: this.params.name,
+        email: this.params.email
+      };
+
+      axios.post(url, details).then(function (_ref) {
+        var data = _ref.data;
+
+        console.log(data);
+        _this.$emit('detail', data);
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 74 */,
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "panel panel-primary" }, [
+    _c("div", { staticClass: "panel-heading" }, [_vm._v("Search Users")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "panel-body" }, [
+      _c("div", { staticClass: "form-group" }, [
+        _c("div", [
+          _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.params.name,
+                expression: "params.name"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { id: "name" },
+            domProps: { value: _vm.params.name },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.params, "name", $event.target.value)
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.params.email,
+                expression: "params.email"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { id: "email" },
+            domProps: { value: _vm.params.email },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.params, "email", $event.target.value)
+              }
+            }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn btn-primary btn-sm", on: { click: _vm.Filter } },
+        [_vm._v("Filter")]
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-6b3f8fd4", module.exports)
   }
 }
 

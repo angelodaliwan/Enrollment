@@ -1,23 +1,21 @@
-<!--suppress ALL -->
+
 <template>
-    <div>
-        <div class="panel panel-default">
-            <div class="panel-heading">Edit</div>
-            <div class="panel-body">
-                <div class="form-group">
-                    <div class="form-control">
-                        <label for="name">Name</label>
-                        <input id="name" class="form-control"  v-model="user.name">
-                    </div>
-                    <div class="form-control">
-                        <label for="email">Email</label>
-                        <input id="email" class="form-control"  v-model="user.email">
-                    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Edit</div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div>
+                    <label for="name">Name</label>
+                    <input id="name" class="form-control"  v-model="user.name">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" class="form-control"  v-model="user.email">
                 </div>
             </div>
-            <button class="btn btn-success btn-sm" @click="Update">Update</button>
-            <button class="btn btn-warning btn-sm"  @click="Cancel">Cancel</button>
         </div>
+        <button class="btn btn-success btn-sm" @click="Update">Update</button>
+        <button class="btn btn-warning btn-sm"  @click="Cancel">Cancel</button>
     </div>
 </template>
 

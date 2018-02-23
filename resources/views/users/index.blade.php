@@ -2,5 +2,8 @@
 
 
 @section('content')
-        <users :data="{{$users}}"></users>
-@stop
+        <div class="container-fluid">
+                <users :data="{{$users}}"></users>
+        </div>
+        
+@endsection

@@ -1,17 +1,20 @@
 <!--suppress ALL -->
 <template>
     <div>
-        <div class="form-group">
-            <div class="form-control">
-                <label for="name">Name</label>
-                <input id="name" v-model="name">
+        <div class="panel panel-default">
+            <div class="panel-heading">Create New Student</div>
+            <div class="panel-body">
+                <div class="form-control">
+                    <label for="name">Name</label>
+                    <input id="name" v-model="name">
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input id="email" v-model="email">
+                </div>
+                <button class="btn btn-success btn-sm" @click="Create">Create</button>
+                <button class="btn btn-warning btn-sm" @click="Cancel">Cancel</button>
             </div>
-            <div class="form-control">
-                <label for="email">Email</label>
-                <input id="email" v-model="email">
-            </div>
-            <button class="btn btn-success btn-sm" @click="Create">Create</button>
-            <button class="btn btn-warning btn-sm" @click="Cancel">Cancel</button>
         </div>
     </div>
 </template>

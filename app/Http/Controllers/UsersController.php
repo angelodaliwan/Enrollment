@@ -3,15 +3,28 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use Bzarzuela\ModelFilter;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+    protected $model_filter;
+    protected $pagination = 15;
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+
+        $this->model_filter = new ModelFilter('users');
+
+        $this->model_filter->setRules([
+           'name' => ['like'],
+           'email' => ['like'],
+        ]);
+    }
+
+
     public function index()
     {
         $users = User::all();
