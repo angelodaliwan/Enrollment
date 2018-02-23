@@ -17,9 +17,6 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <user-component></user-component>
-        </div>
     </div>
 </div>
 @endsection

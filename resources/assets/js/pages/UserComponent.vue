@@ -1,34 +1,36 @@
 <!--suppress ALL -->
 <template>
-    <div class="row">
-        <div class="col-md-6">
-            <div v-if="!show_edit">
-                <div v-if="!create">
-                    <button class="btn btn-primary btn-sm" @click="Create">Create New User</button>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="user in users">
-                                <td>{{ user.name}}</td>
-                                <td>{{ user.email }}</td>
-                                <td><button class="btn btn-warning btn-sm" @click="showEdit(user)">Edit</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div v-if="!show_edit">
+                    <div v-if="!create">
+                        <button class="btn btn-primary btn-sm" @click="Create">Create New User</button>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="user in users">
+                                    <td>{{ user.name}}</td>
+                                    <td>{{ user.email }}</td>
+                                    <td><button class="btn btn-warning btn-sm" @click="showEdit(user)">Edit</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div v-if="create">
+                        <button class="btn btn-info btn-sm" @click="Cancel">Cancel</button>
+                        <create-user @add="added"></create-user>
+                    </div>
                 </div>
-                <div v-if="create">
-                    <button class="btn btn-info btn-sm" @click="Cancel">Cancel</button>
-                    <create-user @add="added"></create-user>
+                <div v-if="show_edit">
+                    <button class="btn btn-warning btn-sm" @click="CancelEdit">Cancel</button>
+                    <edit-user-component :data="(this.edit_details)" @updated="update"></edit-user-component>
                 </div>
-            </div>
-            <div v-if="show_edit">
-                <button class="btn btn-warning btn-sm" @click="CancelEdit">Cancel</button>
-                <edit-user-component :data="(this.edit_details)" @updated="update"></edit-user-component>
             </div>
         </div>
     </div>
