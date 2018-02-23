@@ -4,7 +4,7 @@
 @section('content')
 
     <div class="container-fluid">
-        <user-component :data="{{$users}}"></user-component>
+        <users :data="{{$users}}"></users>
     </div>
 
 @stop

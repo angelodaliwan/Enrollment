@@ -16,6 +16,7 @@
                 </div>
             </div>
             <button class="btn btn-success btn-sm" @click="Update">Update</button>
+            <button class="btn btn-warning btn-sm"  @click="Cancel">Cancel</button>
         </div>
     </div>
 </template>
@@ -31,6 +32,9 @@
     },
 
     methods: {
+      Cancel(){
+        this.$emit('editcanceled');
+      },
       Update() {
         let url = `/users/${this.user.id}/update`;
 

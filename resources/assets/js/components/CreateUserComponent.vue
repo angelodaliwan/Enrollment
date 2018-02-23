@@ -11,6 +11,7 @@
                 <input id="email" v-model="email">
             </div>
             <button class="btn btn-success btn-sm" @click="Create">Create</button>
+            <button class="btn btn-warning btn-sm" @click="Cancel">Cancel</button>
         </div>
     </div>
 </template>
@@ -26,6 +27,10 @@
     },
 
     methods: {
+        Cancel(){
+          this.$emit('createcanceled');
+        },
+
         Create(){
           let url = '/users/create';
 
@@ -36,8 +41,8 @@
 
           axios.post(url, details)
             .then(({data}) => {
-              console.log(data);
-              this.$emit('add', data)
+                this.$emit('add', data);
+                this.$emit('cancel', false);
           });
         }
 

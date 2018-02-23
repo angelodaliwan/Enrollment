@@ -19,7 +19,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 
 
 /** pages */
-Vue.component('user-component', require('./pages/UserComponent.vue'));
+Vue.component('users', require('./pages/Users.vue'));
 
 const app = new Vue({
     el: '#app'
